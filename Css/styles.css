@@ -1,0 +1,1355 @@
+/* =====================================================
+   MACHUPICCHU ORIGIN
+   ESTILOS PRINCIPALES
+===================================================== */
+
+
+/* ================= COLORES ================= */
+
+:root {
+
+    --verde: #2e4536;
+
+    --verde-claro: #405c4b;
+
+    --dorado: #d68e28;
+
+    --crema: #f7f5dd;
+
+    --crema-claro: #ffecba;
+
+    --blanco: #ffffff;
+
+    --gris: #555555;
+
+    --negro: #222222;
+
+}
+
+
+/* ================= GENERAL ================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: var(--blanco);
+
+    color: var(--negro);
+
+    line-height: 1.6;
+
+}
+
+
+img {
+
+    max-width: 100%;
+
+    display: block;
+
+}
+
+
+button,
+input,
+textarea,
+select {
+
+    font-family: inherit;
+
+}
+
+
+button {
+
+    cursor: pointer;
+
+}
+
+
+a {
+
+    text-decoration: none;
+
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    width: 100%;
+
+    background: var(--verde);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+
+}
+
+
+.nav-container {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 10px 25px;
+
+}
+
+
+.brand img {
+
+    width: 105px;
+
+    height: auto;
+
+}
+
+
+.nav-menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+
+}
+
+
+.nav-menu a {
+
+    color: var(--blanco);
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+
+}
+
+
+.nav-menu a:hover {
+
+    color: var(--dorado);
+
+}
+
+
+.cart-link {
+
+    background: var(--dorado);
+
+    padding: 9px 15px;
+
+    border-radius: 5px;
+
+}
+
+
+.cart-link:hover {
+
+    background: var(--crema-claro);
+
+    color: var(--verde) !important;
+
+}
+
+
+#cart-count {
+
+    font-weight: bold;
+
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+
+    height: 550px;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.hero-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(20,35,27,0.78),
+            rgba(20,35,27,0.25),
+            rgba(20,35,27,0.1)
+        );
+
+}
+
+
+.hero-content {
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+
+    max-width: 800px;
+
+    text-align: center;
+
+    color: var(--blanco);
+
+}
+
+
+.hero-logo {
+
+    width: 160px;
+
+    margin: 0 auto 15px;
+
+    background: rgba(255,255,255,0.95);
+
+    padding: 8px;
+
+    border-radius: 4px;
+
+}
+
+
+.hero-content h1 {
+
+    font-size: clamp(30px, 5vw, 55px);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero-content p {
+
+    font-size: 18px;
+
+    max-width: 600px;
+
+    margin: 0 auto 25px;
+
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    background: var(--dorado);
+
+    color: var(--blanco);
+
+    padding: 13px 28px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-button:hover {
+
+    background: var(--crema-claro);
+
+    color: var(--verde);
+
+}
+
+
+/* ================= SECCIONES ================= */
+
+section {
+
+    scroll-margin-top: 80px;
+
+}
+
+
+.intro {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    padding: 75px 25px 50px;
+
+    text-align: center;
+
+}
+
+
+.section-tag {
+
+    color: var(--dorado);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.section-heading {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: 0 auto 45px;
+
+}
+
+
+.section-heading h2,
+.intro h2,
+.about-text h2 {
+
+    color: var(--verde);
+
+    font-size: clamp(28px, 4vw, 40px);
+
+    line-height: 1.2;
+
+    margin-bottom: 15px;
+
+}
+
+
+.section-heading p {
+
+    color: var(--gris);
+
+}
+
+
+/* ================= PAQUETES ================= */
+
+.packages-section {
+
+    background: var(--crema);
+
+    padding: 80px 25px;
+
+}
+
+
+.packages-grid {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.package-card {
+
+    background: var(--blanco);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+
+    transition: 0.3s;
+
+}
+
+
+.package-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+}
+
+
+.package-image {
+
+    width: 100%;
+
+    height: 220px;
+
+    object-fit: cover;
+
+}
+
+
+.package-body {
+
+    padding: 22px;
+
+}
+
+
+.package-body h3 {
+
+    color: var(--verde);
+
+    font-size: 25px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.package-duration {
+
+    color: var(--dorado);
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.package-description {
+
+    color: var(--gris);
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.itinerary {
+
+    border-top: 1px solid #ddd;
+
+    padding-top: 15px;
+
+    margin-top: 10px;
+
+}
+
+
+.itinerary h4 {
+
+    color: var(--verde);
+
+    margin-bottom: 8px;
+
+}
+
+
+.itinerary p {
+
+    font-size: 13px;
+
+    color: var(--gris);
+
+    margin-bottom: 4px;
+
+}
+
+
+.package-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 20px;
+
+}
+
+
+.package-price {
+
+    color: var(--verde);
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+}
+
+
+.add-button {
+
+    border: none;
+
+    background: var(--verde);
+
+    color: var(--blanco);
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.add-button:hover {
+
+    background: var(--dorado);
+
+}
+
+
+/* ================= CARRITO ================= */
+
+.cart-section {
+
+    padding: 80px 25px;
+
+    background: var(--blanco);
+
+}
+
+
+.cart-container {
+
+    max-width: 900px;
+
+    margin: auto;
+
+}
+
+
+.cart-items {
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+}
+
+
+.empty-cart {
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: var(--gris);
+
+}
+
+
+.cart-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 18px 22px;
+
+    border-bottom: 1px solid #ddd;
+
+}
+
+
+.cart-item:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.cart-item-info h3 {
+
+    color: var(--verde);
+
+    margin-bottom: 4px;
+
+}
+
+
+.cart-item-info p {
+
+    color: var(--gris);
+
+    font-size: 14px;
+
+}
+
+
+.quantity-controls {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.quantity-button {
+
+    width: 30px;
+
+    height: 30px;
+
+    border: none;
+
+    background: var(--verde);
+
+    color: white;
+
+    border-radius: 4px;
+
+    font-size: 18px;
+
+}
+
+
+.quantity-number {
+
+    min-width: 25px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+
+.remove-button {
+
+    border: none;
+
+    background: transparent;
+
+    color: #a33;
+
+    font-size: 13px;
+
+}
+
+
+.cart-total {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 25px 5px;
+
+    font-size: 22px;
+
+    color: var(--verde);
+
+}
+
+
+.buy-button {
+
+    width: 100%;
+
+    border: none;
+
+    background: var(--dorado);
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 5px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+}
+
+
+.buy-button:hover {
+
+    background: var(--verde);
+
+}
+
+
+.buy-button:disabled {
+
+    background: #aaa;
+
+    cursor: not-allowed;
+
+}
+
+
+/* ================= CLIMA ================= */
+
+.weather-section {
+
+    background: var(--verde);
+
+    padding: 80px 25px;
+
+    color: white;
+
+}
+
+
+.weather-section .section-heading h2 {
+
+    color: white;
+
+}
+
+
+.weather-section .section-heading p {
+
+    color: #e5e5e5;
+
+}
+
+
+.weather-container {
+
+    max-width: 800px;
+
+    margin: auto;
+
+}
+
+
+.weather-selector {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.weather-selector select {
+
+    flex: 1;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 15px;
+
+}
+
+
+.weather-selector button {
+
+    background: var(--dorado);
+
+    border: none;
+
+    color: white;
+
+    padding: 13px 20px;
+
+    border-radius: 5px;
+
+    font-weight: bold;
+
+}
+
+
+.weather-result {
+
+    min-height: 180px;
+
+    background: rgba(255,255,255,0.1);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    border-radius: 8px;
+
+    padding: 30px;
+
+    text-align: center;
+
+}
+
+
+.weather-result h3 {
+
+    font-size: 28px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.weather-temperature {
+
+    font-size: 45px;
+
+    color: var(--crema-claro);
+
+    font-weight: bold;
+
+}
+
+
+.weather-info {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-top: 15px;
+
+}
+
+
+/* ================= DESTINOS ================= */
+
+.destinations-section {
+
+    padding: 80px 25px;
+
+    background: var(--crema);
+
+}
+
+
+.destination-content {
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.destination-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    border-top: 4px solid var(--dorado);
+
+}
+
+
+.destination-card h3 {
+
+    color: var(--verde);
+
+    margin-bottom: 10px;
+
+}
+
+
+.destination-card p {
+
+    color: var(--gris);
+
+}
+
+
+/* ================= NOSOTROS ================= */
+
+.about-section {
+
+    padding: 90px 25px;
+
+    background: white;
+
+}
+
+
+.about-container {
+
+    max-width: 850px;
+
+    margin: auto;
+
+}
+
+
+.about-text {
+
+    text-align: center;
+
+}
+
+
+.about-text p {
+
+    color: var(--gris);
+
+    margin-bottom: 15px;
+
+}
+
+
+/* ================= CONTACTO ================= */
+
+.contact-section {
+
+    padding: 80px 25px;
+
+    background: var(--crema);
+
+}
+
+
+.contact-container {
+
+    max-width: 700px;
+
+    margin: auto;
+
+}
+
+
+.contact-form {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 8px;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+}
+
+
+.form-group {
+
+    margin-bottom: 20px;
+
+}
+
+
+.form-group label {
+
+    display: block;
+
+    color: var(--verde);
+
+    font-weight: bold;
+
+    margin-bottom: 7px;
+
+}
+
+
+.form-group input,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    resize: vertical;
+
+}
+
+
+.form-group input:focus,
+.form-group textarea:focus {
+
+    border-color: var(--dorado);
+
+}
+
+
+.contact-button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: var(--verde);
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+
+.contact-button:hover {
+
+    background: var(--dorado);
+
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.65);
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 2000;
+
+    padding: 20px;
+
+}
+
+
+.modal.active {
+
+    display: flex;
+
+}
+
+
+.modal-content {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    position: relative;
+
+    animation: modalAppear 0.3s ease;
+
+}
+
+
+@keyframes modalAppear {
+
+    from {
+
+        transform: scale(0.9);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+.close-modal {
+
+    position: absolute;
+
+    top: 10px;
+
+    right: 15px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 28px;
+
+    color: #555;
+
+}
+
+
+.modal-content h2 {
+
+    color: var(--verde);
+
+    margin-bottom: 15px;
+
+}
+
+
+.modal-price {
+
+    color: var(--gris);
+
+    margin-bottom: 20px;
+
+}
+
+
+.modal-price strong {
+
+    color: var(--dorado);
+
+}
+
+
+.thank-you-image {
+
+    width: 150px;
+
+    height: 150px;
+
+    object-fit: cover;
+
+    margin: 10px auto 20px;
+
+    border-radius: 8px;
+
+}
+
+
+.thank-you-text {
+
+    color: var(--verde);
+
+    font-weight: bold;
+
+    font-size: 17px;
+
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+
+    background: var(--verde);
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+}
+
+
+.footer p {
+
+    margin: 3px;
+
+    font-size: 14px;
+
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .packages-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .destination-content {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .nav-menu {
+
+        gap: 15px;
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .nav-container {
+
+        flex-direction: column;
+
+        gap: 10px;
+
+    }
+
+
+    .nav-menu {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 10px 15px;
+
+    }
+
+
+    .hero {
+
+        height: 500px;
+
+    }
+
+
+    .packages-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .weather-selector {
+
+        flex-direction: column;
+
+    }
+
+
+    .cart-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .package-image {
+
+        height: 240px;
+
+    }
+
+}

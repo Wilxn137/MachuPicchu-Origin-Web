@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>MachuPicchu Origin | Viajes por Perú</title>
+
+    <link rel="stylesheet" href="Css/styles.css" />
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+      <div class="nav-container">
+        <a href="#inicio" class="brand">
+          <img src="Imagenes/logo.png" alt="MachuPicchu Origin" />
+        </a>
+
+        <nav class="nav-menu">
+          <a href="#inicio">Inicio</a>
+          <a href="#paquetes">Paquetes</a>
+          <a href="#destinos">Destinos</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#carrito" class="cart-link">
+            Carrito <span id="cart-count">0</span>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+    <section id="inicio" class="hero">
+      <img
+        src="Imagenes/machupicchu.jpg"
+        alt="Machu Picchu"
+        class="hero-image"
+      />
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <img
+          src="Imagenes/logo.png"
+          alt="MachuPicchu Origin"
+          class="hero-logo"
+        />
+
+        <h1>MACHUPICCHU ORIGIN</h1>
+
+        <p>
+          Descubre Perú, vive su historia y crea recuerdos para toda la vida.
+        </p>
+
+        <a href="#paquetes" class="hero-button"> Ver paquetes </a>
+      </div>
+    </section>
+
+    <!-- ================= INTRODUCCIÓN ================= -->
+    <section class="intro">
+      <p class="section-tag">MACHUPICCHU ORIGIN</p>
+
+      <h2>Viaja por Perú</h2>
+
+      <p>
+        Conoce algunos de los destinos más representativos del Perú mediante
+        experiencias diseñadas para descubrir su cultura, naturaleza, historia y
+        paisajes.
+      </p>
+    </section>
+
+    <!-- ================= PAQUETES ================= -->
+    <section id="paquetes" class="packages-section">
+      <div class="section-heading">
+        <p class="section-tag">NUESTROS VIAJES</p>
+
+        <h2>Paquetes turísticos</h2>
+
+        <p>
+          Elige tu próximo destino y descubre todo lo que tenemos preparado para
+          ti.
+        </p>
+      </div>
+
+      <div id="packages-container" class="packages-grid">
+        <!-- Los paquetes se generan automáticamente con JavaScript -->
+      </div>
+    </section>
+
+    <!-- ================= CARRITO ================= -->
+    <section id="carrito" class="cart-section">
+      <div class="cart-container">
+        <div class="section-heading">
+          <p class="section-tag">TU VIAJE</p>
+
+          <h2>Resumen de compra</h2>
+        </div>
+
+        <div id="cart-items" class="cart-items">
+          <p class="empty-cart">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="cart-total">
+          <span>Total</span>
+
+          <strong id="cart-total"> S/ 0.00 </strong>
+        </div>
+
+        <button id="buy-button" class="buy-button" onclick="completePurchase()">
+          Comprar
+        </button>
+      </div>
+    </section>
+
+    <!-- ================= CLIMA ================= -->
+    <section class="weather-section">
+      <div class="weather-container">
+        <div class="section-heading">
+          <p class="section-tag">CLIMA DEL DESTINO</p>
+
+          <h2>Consulta el clima</h2>
+
+          <p>
+            Selecciona un destino para conocer sus condiciones meteorológicas
+            actuales.
+          </p>
+        </div>
+
+        <div class="weather-selector">
+          <select id="weather-city">
+            <option value="Cusco">Cusco</option>
+            <option value="Lima">Lima</option>
+            <option value="Arequipa">Arequipa</option>
+            <option value="Ica">Ica</option>
+            <option value="Puno">Puno</option>
+            <option value="Chachapoyas">Chachapoyas</option>
+          </select>
+
+          <button onclick="getWeather()">Consultar clima</button>
+        </div>
+
+        <div id="weather-result" class="weather-result">
+          <p>Selecciona un destino para consultar el clima.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DESTINOS ================= -->
+    <section id="destinos" class="destinations-section">
+      <div class="section-heading">
+        <p class="section-tag">DESTINOS</p>
+
+        <h2>Perú tiene algo para ti</h2>
+
+        <p>
+          Desde los Andes hasta la costa y la Amazonía, descubre diferentes
+          paisajes y culturas.
+        </p>
+      </div>
+
+      <div class="destination-content">
+        <div class="destination-card">
+          <h3>Cultura e historia</h3>
+
+          <p>
+            Explora ciudades históricas, sitios arqueológicos y tradiciones que
+            forman parte de la identidad peruana.
+          </p>
+        </div>
+
+        <div class="destination-card">
+          <h3>Naturaleza</h3>
+
+          <p>
+            Descubre montañas, desiertos, lagos y paisajes naturales únicos.
+          </p>
+        </div>
+
+        <div class="destination-card">
+          <h3>Aventura</h3>
+
+          <p>
+            Vive experiencias diferentes y descubre nuevos lugares durante tu
+            recorrido.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NOSOTROS ================= -->
+    <section id="nosotros" class="about-section">
+      <div class="about-container">
+        <div class="about-text">
+          <p class="section-tag">SOBRE NOSOTROS</p>
+
+          <h2>Más que un viaje, una historia para recordar</h2>
+
+          <p>
+            MachuPicchu Origin nace como una propuesta turística enfocada en
+            mostrar la diversidad del Perú mediante experiencias de viaje
+            sencillas, atractivas y pensadas para descubrir cada destino.
+          </p>
+
+          <p>
+            Nuestro objetivo es acercar a los viajeros a la cultura, naturaleza
+            e historia de nuestro país.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contact-section">
+      <div class="contact-container">
+        <div class="section-heading">
+          <p class="section-tag">CONTACTO</p>
+
+          <h2>¿Listo para viajar?</h2>
+
+          <p>Déjanos tus datos y nos pondremos en contacto contigo.</p>
+        </div>
+
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label for="name"> Nombre </label>
+
+            <input type="text" id="name" placeholder="Tu nombre" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email"> Correo electrónico </label>
+
+            <input
+              type="email"
+              id="email"
+              placeholder="tucorreo@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="message"> Mensaje </label>
+
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Cuéntanos qué viaje te interesa..."
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-button">Enviar mensaje</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ================= MODAL COMPRA ================= -->
+    <div id="purchase-modal" class="modal">
+      <div class="modal-content">
+        <button class="close-modal" onclick="closePurchaseModal()">×</button>
+
+        <h2>Compra realizada correctamente</h2>
+
+        <p class="modal-price">
+          Total: <strong id="purchase-total">S/ 0.00</strong>
+        </p>
+
+        <img
+          src="Imagenes/gracias.jpg"
+          alt="Muchas gracias"
+          class="thank-you-image"
+        />
+
+        <p class="thank-you-text">Gracias por elegir MachuPicchu Origin</p>
+      </div>
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+      <p>Wilson Ponce Cruz</p>
+
+      <p>Participación: 100%</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
